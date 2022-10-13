@@ -1,21 +1,21 @@
 /* Regular */
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/avenir-next-regular.ttf") format("truetype");
+  src: url("../../assets/fonts/avenir-next-regular.otf") format("opentype"), url("../../assets/fonts/avenir-next-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 /* Demi */
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/avenir-next-demi.ttf") format("truetype");
+  src: url("../../assets/fonts/avenir-next-demi.otf") format("opentype"), url("../../assets/fonts/avenir-next-demi.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 /* Bold */
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/avenir-next-bold.ttf") format("truetype");
+  src: url("../../assets/fonts/avenir-next-bold.otf") format("opentype"), url("../../assets/fonts/avenir-next-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -29,9 +29,10 @@
   background-color: #323232;
 }
 .header__logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
   padding: 1rem 0;
-  text-align: center;
-  height: 1.5rem;
+  margin: 0 auto;
 }
 .header__menu {
   display: flex;
@@ -39,24 +40,138 @@
   align-items: center;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 .header__menu-item {
-  display: block;
-  flex-grow: 1;
+  flex: 0.5;
   text-align: center;
 }
 .header__menu-item-link {
   display: block;
   color: #ffffff;
   font-size: 0.875rem;
+  line-height: 2rem;
   font-weight: 600;
   text-decoration: none;
   padding: 1rem 0;
 }
 .header__menu-item-link--active {
-  border-bottom: 0.3rem solid #ffffff;
+  border-bottom: 0.2rem solid #ffffff;
 }
 
+/* styles for header on tablet device */
+@media only screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: baseline;
+  }
+  .header__logo {
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  .header__navigation {
+    flex: 1 1 auto;
+  }
+  .header__menu {
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 0;
+    padding-left: 5rem;
+  }
+  .header__menu-item {
+    flex: unset;
+  }
+  .header__menu-item-link {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+/* styles for header on desktop */
+@media only screen and (min-width: 1280px) {
+  .header__logo {
+    padding-left: 6rem;
+  }
+  .header__menu {
+    padding-left: 9rem;
+  }
+}
+/* styles for main content for mobile */
+.hero {
+  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/images/hero-bio.jpg);
+  background-color: rgba(50, 50, 50, 0.5);
+  background-position: center;
+  background-size: cover;
+  padding: 6rem 0;
+}
+.hero__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.about {
+  padding: 0 1rem;
+}
+.about__title {
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1.5rem 0 1rem;
+}
+.about__subtitle {
+  color: #323232;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1rem;
+}
+.about__image {
+  width: 100%;
+}
+.about__content {
+  color: #323232;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1rem;
+}
+.about__text {
+  color: #323232;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 1rem;
+}
+.about__text--bold {
+  font-weight: 600;
+}
+
+.photo {
+  padding: 0 1rem;
+}
+.photo__title {
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1.5rem 0 1rem;
+}
+.photo__image {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+/* styles for main content on tablet device */
 html,
 body {
   box-sizing: border-box;

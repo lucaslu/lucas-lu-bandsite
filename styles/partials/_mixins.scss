@@ -4,8 +4,9 @@
   align-items: $align;
 }
 
-@mixin title($color, $size: 1.5rem, $weight: 700) {
+@mixin title($color, $size: 1.5rem, $height: 2rem, $weight: 600) {
   color: $color;
   font-size: $size;
+  line-height: $height;
   font-weight: $weight;
 }

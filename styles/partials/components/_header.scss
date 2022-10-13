@@ -1,5 +1,5 @@
 @use "../colors" as colors;
-@use "../breakpoints" as breakpoints;
+@use "../breakpoints" as breakpoint;
 @use "../mixins" as mixins;
 
 /* styles for header for mobile */
@@ -7,31 +7,77 @@
   background-color: colors.$bandsite-black;
 
   &__logo {
+    max-width: 7.5rem;
+    max-height: 1.25rem;
     padding: 1rem 0;
-    text-align: center;
-    height: 1.5rem;
+    margin: 0 auto;
   }
 
   &__menu {
     @include mixins.flexed(space-around);
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
   &__menu-item {
-    display: block;
-    flex-grow: 1;
+    // width: 50%;
+    flex: 0.5;
     text-align: center;
   }
 
   &__menu-item-link {
     display: block;
-    @include mixins.title(colors.$white, 0.875rem, 600);
+    @include mixins.title(colors.$white, 0.875rem);
     text-decoration: none;
     padding: 1rem 0;
 
     &--active {
-      border-bottom: 0.3rem solid colors.$white;
+      border-bottom: 0.2rem solid colors.$white;
+    }
+  }
+}
+
+/* styles for header on tablet device */
+@include breakpoint.medium {
+  .header {
+    display: flex;
+    align-items: baseline;
+
+    &__logo {
+      padding-top: 2rem;
+      padding-left: 2rem;
+    }
+
+    &__navigation {
+      flex: 1 1 auto;
+    }
+    &__menu {
+      // display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      margin: 0;
+      padding-left: 5rem;
+    }
+
+    &__menu-item {
+      flex: unset;
+    }
+
+    &__menu-item-link {
+      @include mixins.title(colors.$white, 1rem, 2rem);
+    }
+  }
+}
+
+/* styles for header on desktop */
+@include breakpoint.large {
+  .header {
+    &__logo {
+      padding-left: 6rem;
+    }
+    &__menu {
+      padding-left: 9rem;
     }
   }
 }
