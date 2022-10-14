@@ -245,6 +245,9 @@
   background-color: #323232;
   padding: 0 1rem 1rem;
 }
+.footer__container {
+  padding-bottom: 1rem;
+}
 .footer__title {
   color: #ffffff;
   font-size: 1.5rem;
@@ -258,6 +261,7 @@
 }
 .footer__logo {
   padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 .footer__text {
   color: #ffffff;
@@ -265,9 +269,47 @@
   line-height: 1.125rem;
   font-weight: 400;
   margin: 0;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
+/* styles for footer on tablet device */
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 0 2.25rem 2.25rem;
+    position: relative;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding: 0;
+  }
+  .footer__title {
+    color: #ffffff;
+    font-size: 2.25rem;
+    font-weight: 600;
+    padding: 3rem 2.25rem 2.25rem 0;
+  }
+  .footer__contact-container {
+    display: flex;
+  }
+  .footer__contact {
+    flex-grow: 1;
+  }
+  .footer__text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-bottom: 2.25rem;
+  }
+  .footer__text--title {
+    font-weight: 600;
+  }
+  .footer__logo {
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+  }
+}
 html,
 body {
   box-sizing: border-box;

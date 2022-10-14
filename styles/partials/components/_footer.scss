@@ -7,6 +7,10 @@
   background-color: colors.$bandsite-black;
   padding: 0 1rem 1rem;
 
+  &__container {
+    padding-bottom: 1rem;
+  }
+
   &__title {
     @include mixins.title(colors.$white, 1.5rem, 2rem, 600);
     margin: 0;
@@ -19,11 +23,53 @@
 
   &__logo {
     padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 
   &__text {
     @include mixins.title(colors.$white, 0.8125rem, 1.125rem, 400);
     margin: 0;
-    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* styles for footer on tablet device */
+@include breakpoint.medium {
+  .footer {
+    padding: 0 2.25rem 2.25rem;
+    position: relative;
+
+    &__container {
+      @include mixins.flexed(flex-start, baseline);
+      padding: 0;
+    }
+
+    &__title {
+      @include mixins.title(colors.$white, 2.25rem, null, 600);
+      padding: 3rem 2.25rem 2.25rem 0;
+    }
+
+    &__contact-container {
+      display: flex;
+    }
+
+    &__contact {
+      flex-grow: 1;
+    }
+
+    &__text {
+      @include mixins.title(null, 0.875rem, 1.25rem, null);
+      padding-bottom: 2.25rem;
+
+      &--title {
+        font-weight: 600;
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      top: 1.5rem;
+      right: 3rem;
+    }
   }
 }
