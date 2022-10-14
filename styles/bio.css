@@ -237,8 +237,37 @@
   .photo__image {
     width: 33%;
     padding: 0.5rem;
+    flex-grow: 1;
   }
 }
+/* styles for footer for mobile */
+.footer {
+  background-color: #323232;
+  padding: 0 1rem 1rem;
+}
+.footer__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1.5rem 0 1rem;
+}
+.footer__icon {
+  padding-right: 2rem;
+}
+.footer__logo {
+  padding-top: 2rem;
+}
+.footer__text {
+  color: #ffffff;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 1rem;
+}
+
 html,
 body {
   box-sizing: border-box;
