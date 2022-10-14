@@ -115,7 +115,7 @@
   }
 
   .photo {
-    padding: 0 2.25rem;
+    padding: 0 2.25rem 2.25rem;
 
     &__title {
       @include mixins.title(colors.$bandsite-black, 2.25rem, 2.75rem, 700);
@@ -133,5 +133,28 @@
       padding: 0.5rem;
       flex-grow: 1;
     }
+  }
+}
+
+/* styles for header on desktop */
+@include breakpoint.large {
+  .hero {
+    &__title {
+      padding-left: 6rem;
+    }
+  }
+
+  .about {
+    &__title {
+      padding-left: 3.75rem;
+    }
+
+    &__container {
+      padding: 0 10rem;
+    }
+  }
+
+  .photo {
+    padding: 0 6rem 2.25rem;
   }
 }

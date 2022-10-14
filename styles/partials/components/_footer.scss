@@ -73,3 +73,15 @@
     }
   }
 }
+
+/* styles for header on desktop */
+@include breakpoint.large {
+  .footer {
+    padding: 0 6rem 2.25rem;
+
+    &__logo {
+      // top: 1.5rem;
+      right: 7rem;
+    }
+  }
+}
