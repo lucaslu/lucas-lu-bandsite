@@ -11,6 +11,7 @@
     max-height: 1.25rem;
     padding: 1rem 0;
     margin: 0 auto;
+    z-index: 1;
   }
 
   &__menu {
@@ -28,9 +29,15 @@
 
   &__menu-item-link {
     display: block;
-    @include mixins.title(colors.$white, 0.875rem);
+    @include mixins.title(colors.$mercury, 0.875rem);
     text-decoration: none;
     padding: 1rem 0;
+    border: 0.2rem solid transparent;
+
+    &:hover {
+      color: colors.$white;
+      border-bottom: 0.2rem solid colors.$white;
+    }
 
     &--active {
       border-bottom: 0.2rem solid colors.$white;
@@ -42,18 +49,20 @@
 @include breakpoint.medium {
   .header {
     display: flex;
+    justify-content: flex-start;
     align-items: baseline;
 
     &__logo {
       padding-top: 2rem;
       padding-left: 2rem;
+      // flex-grow: 1;
     }
 
     &__navigation {
-      flex: 1 1 auto;
+      flex-grow: 1;
     }
+
     &__menu {
-      // display: flex;
       justify-content: flex-start;
       gap: 2rem;
       margin: 0;
@@ -65,7 +74,7 @@
     }
 
     &__menu-item-link {
-      @include mixins.title(colors.$white, 1rem, 2rem);
+      @include mixins.title(null, 1rem, 2rem);
     }
   }
 }

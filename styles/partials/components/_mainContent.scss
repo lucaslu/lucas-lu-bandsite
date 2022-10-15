@@ -69,6 +69,12 @@
   &__image {
     width: 100%;
     padding-bottom: 1rem;
+    filter: grayscale(100%);
+    transition: all 0.5s linear;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 }
 
