@@ -32,7 +32,7 @@
     @include mixins.title(colors.$mercury, 0.875rem);
     text-decoration: none;
     padding: 1rem 0;
-    border: 0.2rem solid transparent;
+    border-bottom: 0.2rem solid transparent;
 
     &:hover {
       color: colors.$white;
