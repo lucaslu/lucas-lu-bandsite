@@ -55,7 +55,7 @@
   font-weight: 600;
   text-decoration: none;
   padding: 1rem 0;
-  border: 0.2rem solid transparent;
+  border-bottom: 0.2rem solid transparent;
 }
 .header__menu-item-link:hover {
   color: #ffffff;
