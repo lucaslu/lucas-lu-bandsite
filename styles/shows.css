@@ -1,0 +1,192 @@
+/* Regular */
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/avenir-next-regular.otf") format("opentype"), url("../../assets/fonts/avenir-next-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Demi */
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/avenir-next-demi.otf") format("opentype"), url("../../assets/fonts/avenir-next-demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/* Bold */
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/avenir-next-bold.otf") format("opentype"), url("../../assets/fonts/avenir-next-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Primary colors */
+/* Secondary colors */
+/* media query for mobile */
+/* media query for tablet */
+/* media query for high pixel density devices */
+/* styles for header for mobile */
+.header {
+  background-color: #323232;
+}
+.header__logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.header__menu-item {
+  flex: 0.5;
+  text-align: center;
+}
+.header__menu-item-link {
+  display: block;
+  color: #e1e1e1;
+  font-size: 0.875rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 0.2rem solid transparent;
+}
+.header__menu-item-link:hover {
+  color: #ffffff;
+  border-bottom: 0.2rem solid #ffffff;
+}
+.header__menu-item-link--active {
+  border-bottom: 0.2rem solid #ffffff;
+}
+
+/* styles for header on tablet device */
+@media only screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .header__logo {
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  .header__navigation {
+    flex-grow: 1;
+  }
+  .header__menu {
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 0;
+    padding-left: 5rem;
+  }
+  .header__menu-item {
+    flex: unset;
+  }
+  .header__menu-item-link {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+/* styles for header on desktop */
+@media only screen and (min-width: 1280px) {
+  .header__logo {
+    padding-left: 6rem;
+  }
+  .header__menu {
+    padding-left: 9rem;
+  }
+}
+/* styles for main content for mobile */
+.hero {
+  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 0 1rem;
+}
+.hero__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 0;
+}
+.hero__subtitle {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1.5rem;
+}
+.hero__iframe {
+  max-width: 18rem;
+  height: 10rem;
+  padding-bottom: 1rem;
+}
+
+.show__title {
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.ticket {
+  border-bottom: 0.0625rem solid #e1e1e1;
+  margin-bottom: 1rem;
+}
+.ticket__title {
+  color: #afafaf;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  margin: 0;
+}
+.ticket__text {
+  color: #323232;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 1rem 1rem;
+}
+.ticket__text--strong {
+  font-weight: 600;
+}
+.ticket__button {
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  display: block;
+  background-color: #323232;
+  border-radius: 0.25rem;
+  width: 90%;
+  padding: 0.8125rem 0.875rem;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto 1rem;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}/*# sourceMappingURL=shows.css.map */

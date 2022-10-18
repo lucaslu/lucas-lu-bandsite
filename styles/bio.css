@@ -106,7 +106,6 @@
 /* styles for main content for mobile */
 .hero {
   background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/images/hero-bio.jpg);
-  background-color: rgba(50, 50, 50, 0.5);
   background-position: center;
   background-size: cover;
   padding: 6rem 0;
