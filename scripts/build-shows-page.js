@@ -1,89 +1,120 @@
 const concerts = [
   {
-    dates: "Mon Sept 06 2021",
+    date: "Mon Sept 06 2021",
     venue: "Ronald Lane",
     location: "San Francisco, CA",
   },
   {
-    dates: "Tue Sept 21 2021",
+    date: "Tue Sept 21 2021",
     venue: "Pier 3 East",
     location: "San Francisco, CA",
   },
   {
-    dates: "Fri Oct 15 2021",
+    date: "Fri Oct 15 2021",
     venue: "View Lounge",
     location: "San Francisco, CA",
   },
   {
-    dates: "Sat Nov 06 2021",
+    date: "Sat Nov 06 2021",
     venue: "Hyatt Agency",
     location: "San Francisco, CA",
   },
   {
-    dates: "Fri Nov 26 2021",
+    date: "Fri Nov 26 2021",
     venue: "Moscow Center",
     location: "San Francisco, CA",
   },
   {
-    dates: "Wed Dec 15 2021",
+    date: "Wed Dec 15 2021",
     venue: "Press Club",
     location: "San Francisco, CA",
   },
 ];
 
-let mainContent = document.querySelector(".main-content");
+const addElement = (parent, element, className, text) => {
+  const newElement = document.createElement(element);
+  newElement.classList.add(className);
+  newElement.innerText = text;
+  parent.appendChild(newElement);
+  return newElement;
+};
 
-const newSection = document.createElement("section");
-newSection.classList.add("show");
-mainContent.appendChild(newSection);
+const mainContent = document.querySelector(".main-content");
 
-const newHeading = document.createElement("h2");
-newHeading.classList.add("show__title");
-newHeading.innerText = "Shows";
-newSection.appendChild(newHeading);
+// const newSection = document.createElement("section");
+// newSection.classList.add("show");
+// mainContent.appendChild(newSection);
+const newSection = addElement(mainContent, "section", "show", null);
 
-function createConcert(dates, venue, location) {
-  const newArticle = document.createElement("article");
-  newArticle.classList.add("ticket");
-  newSection.appendChild(newArticle);
+// const newHeading = document.createElement("h2");
+// newHeading.classList.add("show__title");
+// newHeading.innerText = "Shows";
+// newSection.appendChild(newHeading);
+addElement(newSection, "h2", "show__title", "Shows");
 
-  const newDate = document.createElement("p");
-  newDate.classList.add("ticket__title");
-  newDate.innerText = "DATE";
-  newArticle.appendChild(newDate);
+const createConcert = (date, venue, location) => {
+  // const newArticle = document.createElement("article");
+  // newArticle.classList.add("ticket");
+  // newSection.appendChild(newArticle);
+  const newArticle = addElement(newSection, "article", "ticket", null);
 
-  const newDateText = document.createElement("p");
-  newDateText.classList.add("ticket__text");
-  newDateText.classList.add("ticket__text--strong");
-  newDateText.innerText = dates;
-  newArticle.appendChild(newDateText);
+  // const newDate = document.createElement("p");
+  // newDate.classList.add("ticket__title");
+  // newDate.innerText = "DATE";
+  // newArticle.appendChild(newDate);
+  const newDate = addElement(newArticle, "p", "ticket__title", "DATE");
+  newDate.classList.add("ticket__title--hidden");
 
-  const newVenue = document.createElement("p");
-  newVenue.classList.add("ticket__title");
-  newVenue.innerText = "VENUE";
-  newArticle.appendChild(newVenue);
+  // const newDateText = document.createElement("p");
+  // newDateText.classList.add("ticket__text");
+  // newDateText.classList.add("ticket__text--strong");
+  // newDateText.innerText = date;
+  // newArticle.appendChild(newDateText);
+  const newDateText = addElement(newArticle, "p", null, date);
+  newDateText.classList.add("ticket__text", "ticket__text--strong");
 
-  const newVenueText = document.createElement("p");
-  newVenueText.classList.add("ticket__text");
-  newVenueText.innerText = venue;
-  newArticle.appendChild(newVenueText);
+  // const newVenue = document.createElement("p");
+  // newVenue.classList.add("ticket__title");
+  // newVenue.innerText = "VENUE";
+  // newArticle.appendChild(newVenue);
+  const newVenue = addElement(newArticle, "p", "ticket__title", "VENUE");
+  newVenue.classList.add("ticket__title--hidden");
 
-  const newLocation = document.createElement("p");
-  newLocation.classList.add("ticket__title");
-  newLocation.innerText = "LOCATION";
-  newArticle.appendChild(newLocation);
+  // const newVenueText = document.createElement("p");
+  // newVenueText.classList.add("ticket__text");
+  // newVenueText.innerText = venue;
+  // newArticle.appendChild(newVenueText);
+  addElement(newArticle, "p", "ticket__text", venue);
 
-  const newLocationText = document.createElement("p");
-  newLocationText.classList.add("ticket__text");
-  newLocationText.innerText = location;
-  newArticle.appendChild(newLocationText);
+  // const newLocation = document.createElement("p");
+  // newLocation.classList.add("ticket__title");
+  // newLocation.innerText = "LOCATION";
+  // newArticle.appendChild(newLocation);
+  const newLocation = addElement(newArticle, "p", "ticket__title", "LOCATION");
 
-  const newButton = document.createElement("a");
-  newButton.classList.add("ticket__button");
-  newButton.innerText = "BUY TICKETS";
-  newArticle.appendChild(newButton);
-}
+  // const newLocationText = document.createElement("p");
+  // newLocationText.classList.add("ticket__text");
+  // newLocationText.innerText = location;
+  // newArticle.appendChild(newLocationText);
+  addElement(newArticle, "p", "ticket__text", location);
 
-concerts.forEach(({ dates, venue, location }) =>
-  createConcert(dates, venue, location)
+  // const newButton = document.createElement("a");
+  // newButton.classList.add("ticket__button");
+  // newButton.innerText = "BUY TICKETS";
+  // newArticle.appendChild(newButton);
+  const newButton = addElement(
+    newArticle,
+    "a",
+    "ticket__button",
+    "BUY TICKETS"
+  );
+
+  // const newDivider = document.createElement("hr");
+  // newDivider.classList.add("ticket__divider");
+  // newSection.appendChild(newDivider);
+  addElement(newSection, "hr", "ticket__divider", null);
+};
+
+concerts.forEach(({ date, venue, location }) =>
+  createConcert(date, venue, location)
 );
