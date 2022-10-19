@@ -42,6 +42,10 @@
     margin: 0;
     padding: 1.5rem 1rem 1rem;
   }
+
+  &__headers {
+    display: none;
+  }
 }
 
 .ticket {
@@ -114,6 +118,14 @@
       margin: 0;
       padding: 3rem 0 2.25rem;
     }
+    &__headers {
+      @include mixins.flexed(space-between, baseline);
+    }
+    &__headers-item {
+      @include mixins.title(colors.$silver, 0.875rem, 1.375rem);
+      width: 100%;
+      margin: 0;
+    }
   }
 
   .ticket {
@@ -132,12 +144,13 @@
 
     &__button {
       @include mixins.title(null, 0.875rem, null, null);
-      width: 100%;
+      width: 60%;
       min-height: 2.5rem;
       // padding: 0.5rem 5rem;
       text-align: center;
       margin: 0;
     }
+
     &__divider {
       margin: 0;
     }

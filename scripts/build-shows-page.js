@@ -52,6 +52,13 @@ const newSection = addElement(mainContent, "section", "show", null);
 // newSection.appendChild(newHeading);
 addElement(newSection, "h2", "show__title", "Shows");
 
+// Headers for tablet size
+const newHeader = addElement(newSection, "div", "show__headers", null);
+addElement(newHeader, "h3", "show__headers-item", "DATE");
+addElement(newHeader, "h3", "show__headers-item", "VENUE");
+addElement(newHeader, "h3", "show__headers-item", "LOCATION");
+addElement(newHeader, "h3", "show__headers-item", null);
+
 const createConcert = (date, venue, location) => {
   // const newArticle = document.createElement("article");
   // newArticle.classList.add("ticket");

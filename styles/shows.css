@@ -140,6 +140,9 @@
   margin: 0;
   padding: 1.5rem 1rem 1rem;
 }
+.show__headers {
+  display: none;
+}
 
 .ticket:hover {
   background-color: #fafafa;
@@ -212,6 +215,19 @@
     margin: 0;
     padding: 3rem 0 2.25rem;
   }
+  .show__headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .show__headers-item {
+    color: #afafaf;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+  }
   .ticket {
     display: flex;
     justify-content: space-between;
@@ -229,7 +245,7 @@
   }
   .ticket__button {
     font-size: 0.875rem;
-    width: 100%;
+    width: 60%;
     min-height: 2.5rem;
     text-align: center;
     margin: 0;
