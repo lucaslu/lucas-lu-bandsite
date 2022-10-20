@@ -147,6 +147,9 @@
 .ticket:hover {
   background-color: #fafafa;
 }
+.ticket--selected {
+  background-color: #e1e1e1;
+}
 .ticket__title {
   color: #afafaf;
   font-size: 0.875rem;
@@ -179,9 +182,12 @@
   text-align: center;
   margin: 0 1rem;
 }
+.ticket__button:hover {
+  background-color: #000000;
+}
 .ticket__divider {
   border: 0.0625rem solid #e1e1e1;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 /* styles for show content on tablet device */
@@ -225,7 +231,7 @@
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 600;
-    width: 100%;
+    width: 25%;
     margin: 0;
   }
   .ticket {
@@ -241,17 +247,46 @@
     font-size: 0.875rem;
     line-height: 1.375rem;
     padding: 0;
-    width: 100%;
+    width: 25%;
   }
   .ticket__button {
     font-size: 0.875rem;
-    width: 60%;
+    width: 25%;
     min-height: 2.5rem;
     text-align: center;
     margin: 0;
   }
   .ticket__divider {
     margin: 0;
+  }
+}
+/* styles for header on desktop */
+@media only screen and (min-width: 1280px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 0 6rem;
+    gap: 3rem;
+  }
+  .hero__title {
+    padding: 2.25rem 0 12rem;
+  }
+  .hero__subtitle {
+    padding-top: 6rem;
+  }
+  .show {
+    display: flex;
+    padding: 0 6rem;
+  }
+  .show__title {
+    width: 30%;
+  }
+  .show__container {
+    width: 70%;
+    padding: 3rem 0;
+  }
+  .show__headers-item {
+    padding-bottom: 2.25rem;
   }
 }
 /* styles for footer for mobile */

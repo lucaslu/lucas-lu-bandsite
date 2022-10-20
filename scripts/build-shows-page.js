@@ -51,9 +51,10 @@ const newSection = addElement(mainContent, "section", "show", null);
 // newHeading.innerText = "Shows";
 // newSection.appendChild(newHeading);
 addElement(newSection, "h2", "show__title", "Shows");
+const newShowContainer = addElement(newSection, "div", "show__container", null);
 
 // Headers for tablet size
-const newHeader = addElement(newSection, "div", "show__headers", null);
+const newHeader = addElement(newShowContainer, "div", "show__headers", null);
 addElement(newHeader, "h3", "show__headers-item", "DATE");
 addElement(newHeader, "h3", "show__headers-item", "VENUE");
 addElement(newHeader, "h3", "show__headers-item", "LOCATION");
@@ -63,7 +64,10 @@ const createConcert = (date, venue, location) => {
   // const newArticle = document.createElement("article");
   // newArticle.classList.add("ticket");
   // newSection.appendChild(newArticle);
-  const newArticle = addElement(newSection, "article", "ticket", null);
+  const newArticle = addElement(newShowContainer, "article", "ticket", null);
+  newArticle.addEventListener("click", (event) => {
+    newArticle.classList.toggle("ticket--selected");
+  });
 
   // const newDate = document.createElement("p");
   // newDate.classList.add("ticket__title");
@@ -119,7 +123,7 @@ const createConcert = (date, venue, location) => {
   // const newDivider = document.createElement("hr");
   // newDivider.classList.add("ticket__divider");
   // newSection.appendChild(newDivider);
-  addElement(newSection, "hr", "ticket__divider", null);
+  addElement(newShowContainer, "hr", "ticket__divider", null);
 };
 
 concerts.forEach(({ date, venue, location }) =>

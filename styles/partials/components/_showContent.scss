@@ -51,8 +51,13 @@
 .ticket {
   // border-bottom: 0.0625rem solid colors.$mercury;
   // margin-bottom: 1rem;
+
   &:hover {
     background-color: colors.$alabaster;
+  }
+
+  &--selected {
+    background-color: colors.$mercury;
   }
 
   &__title {
@@ -81,11 +86,15 @@
     text-decoration: none;
     text-align: center;
     margin: 0 1rem;
+
+    &:hover {
+      background-color: colors.$bandsite-darkblack;
+    }
   }
 
   &__divider {
     border: 0.0625rem solid colors.$mercury;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 }
 
@@ -123,7 +132,7 @@
     }
     &__headers-item {
       @include mixins.title(colors.$silver, 0.875rem, 1.375rem);
-      width: 100%;
+      width: 25%;
       margin: 0;
     }
   }
@@ -139,12 +148,12 @@
     &__text {
       @include mixins.title(null, 0.875rem, 1.375rem, null);
       padding: 0;
-      width: 100%;
+      width: 25%;
     }
 
     &__button {
       @include mixins.title(null, 0.875rem, null, null);
-      width: 60%;
+      width: 25%;
       min-height: 2.5rem;
       // padding: 0.5rem 5rem;
       text-align: center;
@@ -153,6 +162,42 @@
 
     &__divider {
       margin: 0;
+    }
+  }
+}
+
+/* styles for header on desktop */
+@include breakpoint.large {
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 0 6rem;
+    gap: 3rem;
+
+    &__title {
+      padding: 2.25rem 0 12rem;
+    }
+
+    &__subtitle {
+      padding-top: 6rem;
+    }
+  }
+
+  .show {
+    display: flex;
+    padding: 0 6rem;
+
+    &__title {
+      width: 30%;
+    }
+
+    &__container {
+      width: 70%;
+      padding: 3rem 0;
+    }
+
+    &__headers-item {
+      padding-bottom: 2.25rem;
     }
   }
 }
