@@ -129,6 +129,34 @@
           />
         </div>
       </section>
+      <!-- Comments section -->
+      <section class="comment">
+        <h2>Join the Conversation</h2>
+        <div class="comment__container">
+          <div class="comment__left">
+            <img
+              class="comment__avatar"
+              src="./assets/images/mohan-muruge.jpg"
+              alt="Mohan Muruge"
+            />
+          </div>
+          <div class="comment__right">
+            <form class="comment__add">
+              <label for="name">NAME</label>
+              <input type="text" name="name" placeholder="Enter your name" />
+              <label for="comment">COMMENT</label>
+              <textarea
+                name="comment"
+                cols="30"
+                rows="10"
+                placeholder="Add a new comment"
+              ></textarea>
+              <button type="submit">COMMENT</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="comments__list"></section>
     </main>
     <!-- Main Content -->
 
@@ -164,14 +192,14 @@
 
       <div class="footer__contact-container">
         <div class="footer__contact">
-          <p class="footer__text footer__text--title">
-            Cam Adams <br />
-            Bees Knees Management
+          <p class="footer__text footer__text-title">Cam Adams</p>
+          <p class="footer__text footer__text-title">
+            The Bees Knees Management
           </p>
-          <p class="footer__text">
-            503 Broadway Penthouse, <br />
-            New York, NY 10012, USA
-          </p>
+          <p class="footer__spacing"></p>
+          <p class="footer__text">503 Broadway Penthouse,</p>
+          <p class="footer__text">New York, NY 10012, USA</p>
+          <p class="footer__spacing"></p>
           <p class="footer__text">
             <a class="footer__text" href="mailto:info@thebeesknees.com"
               >info@thebeesknees.com</a
@@ -179,14 +207,12 @@
           </p>
         </div>
         <div class="footer__contact">
-          <p class="footer__text footer__text--title">
-            Pearl Gregg <br />
-            Limitless Artist Group
-          </p>
-          <p class="footer__text">
-            Booking Agent for <br />
-            US / South America / Japan
-          </p>
+          <p class="footer__text footer__text-title">Pearl Gregg</p>
+          <p class="footer__text footer__text-title">Limitless Artist Group</p>
+          <p class="footer__spacing"></p>
+          <p class="footer__text">Booking Agent for</p>
+          <p class="footer__text">US / South America / Japan</p>
+          <p class="footer__spacing"></p>
           <p class="footer__text">
             <a class="footer__text" href="mailto:pearl.gregg@limitlessag.com"
               >pearl.gregg@limitlessag.com</a
@@ -194,14 +220,12 @@
           </p>
         </div>
         <div class="footer__contact">
-          <p class="footer__text footer__text--title">
-            Carson Whyte <br />
-            ARCH Entertainment
-          </p>
-          <p class="footer__text">
-            Booking Agent for <br />
-            UK / EU / AU
-          </p>
+          <p class="footer__text footer__text-title">Carson Whyte</p>
+          <p class="footer__text footer__text-title">ARCH Entertainment</p>
+          <p class="footer__spacing"></p>
+          <p class="footer__text">Booking Agent for</p>
+          <p class="footer__text">UK / EU / AU</p>
+          <p class="footer__spacing"></p>
           <p class="footer__text">
             <a class="footer__text" href="mailto:cwhyte@archentertainment.com"
               >cwhyte@archentertainment.com</a
@@ -210,15 +234,17 @@
         </div>
       </div>
 
-      <img
-        class="footer__logo"
-        src="./assets/logos/Logo-bandsite.svg"
-        alt="logo"
-      />
+      <a href="./index.html"
+        ><img
+          class="footer__logo"
+          src="./assets/logos/Logo-bandsite.svg"
+          alt="logo"
+      /></a>
       <p class="footer__text">
         Copyright The Bees Knees &copy; 2021 All Rights Reserved
       </p>
     </footer>
     <!-- Footer -->
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>

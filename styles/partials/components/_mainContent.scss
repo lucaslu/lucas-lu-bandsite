@@ -78,6 +78,30 @@
   }
 }
 
+.comment {
+  padding: 0 1rem;
+
+  &__container {
+    display: flex;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+  }
+
+  &__item {
+  }
+
+  &__text {
+  }
+
+  &__date {
+  }
+}
+
 /* styles for main content on tablet device */
 @include breakpoint.medium {
   .hero {

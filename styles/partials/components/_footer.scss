@@ -11,6 +11,10 @@
     padding-bottom: 1rem;
   }
 
+  &__contact {
+    padding-bottom: 1rem;
+  }
+
   &__title {
     @include mixins.title(colors.$white, 1.5rem, 2rem, 600);
     margin: 0;
@@ -29,8 +33,12 @@
   &__text {
     @include mixins.title(colors.$white, 0.8125rem, 1.125rem, 400);
     margin: 0;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
     text-decoration: none;
+  }
+
+  &__spacing {
+    margin: 0 solid colors.$bandsite-black;
   }
 }
 
@@ -55,17 +63,13 @@
       gap: 4.5rem;
     }
 
-    // &__contact {
-    //   flex-grow: 1;
-    // }
-
     &__text {
       @include mixins.title(null, 0.875rem, 1.25rem, null);
-      padding-bottom: 2.25rem;
+      // padding-bottom: 2.25rem;
+    }
 
-      &--title {
-        font-weight: 600;
-      }
+    &__text-title {
+      font-weight: 600;
     }
 
     &__logo {

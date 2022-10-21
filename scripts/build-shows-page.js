@@ -78,11 +78,11 @@ const createConcert = (date, venue, location) => {
 
   // const newDateText = document.createElement("p");
   // newDateText.classList.add("ticket__text");
-  // newDateText.classList.add("ticket__text--strong");
+  // newDateText.classList.add("ticket__text-strong");
   // newDateText.innerText = date;
   // newArticle.appendChild(newDateText);
   const newDateText = addElement(newArticle, "p", null, date);
-  newDateText.classList.add("ticket__text", "ticket__text--strong");
+  newDateText.classList.add("ticket__text", "ticket__text-strong");
 
   // const newVenue = document.createElement("p");
   // newVenue.classList.add("ticket__title");
