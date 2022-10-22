@@ -10,7 +10,6 @@
       rgba(50, 50, 50, 0.5)
     ),
     url(../../../assets/images/hero-bio.jpg);
-  // background-color: rgba(50, 50, 50, 0.5);
   background-position: center;
   background-size: cover;
   padding: 6rem 0;
@@ -81,24 +80,103 @@
 .comment {
   padding: 0 1rem;
 
+  &__section-title {
+    @include mixins.title(colors.$bandsite-black, 1.5rem, 2rem, 700);
+    margin: 0;
+    padding: 1.5rem 0 1rem;
+  }
+
   &__container {
     display: flex;
   }
 
+  &__left {
+    width: 15%;
+  }
+
+  &__right {
+    width: 85%;
+  }
+
+  &__add {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__avatar {
+    background-color: colors.$mercury;
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
     object-fit: cover;
+    margin-top: 1.5rem;
   }
 
-  &__item {
+  &__title {
+    @include mixins.title(colors.$silver, 0.875rem, 1.375rem, 400);
+    padding-bottom: 0.25rem;
   }
 
-  &__text {
+  &__input {
+    font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    border: 0.0625rem solid colors.$mercury;
+    margin-bottom: 1rem;
+
+    &:focus {
+      border-color: colors.$bandsite-black;
+    }
+
+    &--large {
+      height: 4.5rem;
+    }
+
+    &--error {
+      border-color: colors.$error;
+    }
+  }
+
+  &__button {
+    @include mixins.title(colors.$white, 0.8125rem, null, 400);
+
+    background-color: colors.$bandsite-black;
+    border-radius: 0.25rem;
+    min-height: 2.5rem;
+    padding: 0.875rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: colors.$bandsite-darkblack;
+    }
+  }
+
+  &__divider {
+    border: 0.0625rem solid colors.$mercury;
+    margin: 0.5rem 0;
+  }
+
+  &__group-container {
+    @include mixins.flexed(space-between, null);
+  }
+
+  &__name {
+    @include mixins.title(colors.$bandsite-black, 0.875rem, 1.375rem);
+    margin: 0;
   }
 
   &__date {
+    @extend .comment__title;
+    margin: 0;
+  }
+
+  &__text {
+    @include mixins.title(colors.$bandsite-black, 0.8125rem, 1.125rem, 400);
+    margin: 0;
   }
 }
 

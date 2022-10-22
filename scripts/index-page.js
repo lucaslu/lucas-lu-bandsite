@@ -64,11 +64,10 @@ const displayComment = (commentObj, commentsListContainer) => {
 };
 
 const render = () => {
-  const commentsListContainer = document.querySelector(".comments__list");
+  const commentsListContainer = document.querySelector(".comment__list");
   commentsListContainer.innerHTML = "";
-  for (const comment of comments) {
-    displayComment(comment, commentsListContainer);
-  }
+
+  comments.forEach((comment) => displayComment(comment, commentsListContainer));
 };
 
 render();

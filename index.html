@@ -131,7 +131,7 @@
       </section>
       <!-- Comments section -->
       <section class="comment">
-        <h2>Join the Conversation</h2>
+        <h2 class="comment__section-title">Join the Conversation</h2>
         <div class="comment__container">
           <div class="comment__left">
             <img
@@ -142,21 +142,51 @@
           </div>
           <div class="comment__right">
             <form class="comment__add">
-              <label for="name">NAME</label>
-              <input type="text" name="name" placeholder="Enter your name" />
-              <label for="comment">COMMENT</label>
+              <label class="comment__title" for="name">NAME</label>
+              <input
+                class="comment__input"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+              />
+              <label class="comment__title" for="comment">COMMENT</label>
               <textarea
+                class="comment__input comment__input--large"
                 name="comment"
                 cols="30"
                 rows="10"
                 placeholder="Add a new comment"
               ></textarea>
-              <button type="submit">COMMENT</button>
+              <button class="comment__button" type="submit">COMMENT</button>
             </form>
           </div>
         </div>
+        <hr class="comment__divider" />
+        <div class="comment__list">
+          <!-- template for javascript createElement -->
+          <article class="comment__item">
+            <div class="comment__container">
+              <div class="comment__left">
+                <div class="comment__avatar"></div>
+              </div>
+              <div class="comment__right">
+                <div class="comment__group-container">
+                  <p class="comment__name">Lucas Lu</p>
+                  <p class="comment__date">10/21/2022</p>
+                </div>
+                <p class="comment__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime laudantium autem itaque, ea nam veritatis eaque
+                  suscipit atque tempora reiciendis dicta quisquam, laboriosam
+                  doloremque. Atque nam eligendi doloribus natus adipisci.
+                </p>
+              </div>
+            </div>
+          </article>
+          <hr class="comment__divider" />
+          <!-- template for javascript createElement -->
+        </div>
       </section>
-      <section class="comments__list"></section>
     </main>
     <!-- Main Content -->
 
@@ -245,6 +275,6 @@
       </p>
     </footer>
     <!-- Footer -->
-    <script src="./scripts/index-page.js"></script>
+    <!-- <script src="./scripts/index-page.js"></script> -->
   </body>
 </html>
