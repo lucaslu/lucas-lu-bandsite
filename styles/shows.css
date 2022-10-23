@@ -106,300 +106,190 @@
 }
 /* styles for main content for mobile */
 .hero {
-  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/images/hero-bio.jpg);
+  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/images/hero-shows.jpg);
   background-position: center;
   background-size: cover;
-  padding: 6rem 0;
+  padding: 0 1rem;
 }
 .hero__title {
   color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding-left: 1rem;
+  margin: 0;
+  padding: 1rem 0;
+  max-width: 16rem;
+}
+.hero__subtitle {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1.5rem;
+}
+.hero__iframe {
+  height: 10rem;
+  padding-bottom: 1rem;
 }
 
-.about {
-  padding: 0 1rem 1rem;
-}
-.about__title {
+.show__title {
   color: #323232;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   margin: 0;
-  padding: 1.5rem 0 1rem;
+  padding: 1.5rem 1rem 1rem;
 }
-.about__subtitle {
-  color: #323232;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  margin: 0;
-  padding-top: 1rem;
-}
-.about__image {
-  width: 100%;
-}
-.about__content {
-  color: #323232;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  margin: 0;
-  padding-top: 1rem;
-}
-.about__text {
-  color: #323232;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  margin: 0;
-  padding-top: 1rem;
-}
-.about__text--bold {
-  font-weight: 600;
+.show__headers {
+  display: none;
 }
 
-.photo {
-  padding: 0 1rem;
+.ticket:hover {
   background-color: #fafafa;
 }
-.photo__title {
-  color: #323232;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 1.5rem 0 1rem;
-}
-.photo__image {
-  width: 100%;
-  padding-bottom: 1rem;
-  filter: grayscale(100%);
-  transition: all 0.5s linear;
-}
-.photo__image:hover {
-  filter: grayscale(0%);
-}
-
-.comment {
-  padding: 0 1rem;
-}
-.comment__outer-container {
-  margin: 0 auto;
-}
-.comment__section-title {
-  color: #323232;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 1.5rem 0 1rem;
-}
-.comment__container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-.comment__right {
-  width: 100%;
-}
-.comment__add {
-  display: flex;
-  flex-direction: column;
-}
-.comment__avatar {
+.ticket--selected {
   background-color: #e1e1e1;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-top: 1.5rem;
 }
-.comment__title, .comment__date {
+.ticket--selected:hover {
+  background-color: #e1e1e1;
+}
+.ticket__title {
   color: #afafaf;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 400;
-  padding-bottom: 0.25rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  margin: 0;
 }
-.comment__input {
-  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+.ticket__text {
   color: #323232;
-  background-color: #fafafa;
-  width: 100%;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  padding: 0.75rem;
-  border: 0.0625rem solid #e1e1e1;
-  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 1rem 1rem;
 }
-.comment__input:focus {
-  border-color: #323232;
+.ticket__text-strong {
+  font-weight: 600;
 }
-.comment__input--large {
-  height: 8rem;
-  resize: none;
-}
-.comment__input--error {
-  border-color: #d22d2d;
-}
-.comment__button {
+.ticket__button {
   color: #ffffff;
   font-size: 0.8125rem;
   font-weight: 400;
+  display: block;
   background-color: #323232;
   border-radius: 0.25rem;
   min-height: 2.5rem;
   padding: 0.875rem 2rem;
   text-decoration: none;
   text-align: center;
-  margin-bottom: 1rem;
-  border: none;
+  margin: 0 1rem;
 }
-.comment__button:hover {
+.ticket__button:hover {
   background-color: #000000;
 }
-.comment__divider {
+.ticket__divider {
   border: 0.0625rem solid #e1e1e1;
   margin: 0.5rem 0;
 }
-.comment__list {
-  padding-bottom: 1rem;
-}
-.comment__group-container {
-  display: flex;
-  justify-content: space-between;
-}
-.comment__name {
-  color: #323232;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  margin: 0;
-}
-.comment__date {
-  margin: 0;
-}
-.comment__text {
-  color: #323232;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  margin: 0;
-}
 
-/* styles for main content on tablet device */
+/* styles for show content on tablet device */
 @media only screen and (min-width: 768px) {
+  .hero {
+    padding: 0 2.25rem;
+  }
   .hero__title {
-    color: #ffffff;
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 700;
-    padding-left: 1rem;
-  }
-  .about {
-    padding: 0 2.25rem 2.25rem;
-  }
-  .about__title {
-    color: #323232;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding: 3rem 0 2.25rem;
-  }
-  .about__subtitle {
-    color: #323232;
-    font-size: 1.5rem;
-    line-height: 2rem;
     font-weight: 600;
+    max-width: 35rem;
     padding: 2.25rem 0;
   }
-  .about__container {
-    padding: 0 5rem;
-  }
-  .about__content {
-    color: #323232;
+  .hero__subtitle {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    padding-top: 2.25rem;
+    padding-top: 3rem;
   }
-  .about__text-container {
-    display: flex;
-    gap: 2.25rem;
+  .hero__iframe {
+    padding-bottom: 2.25rem;
   }
-  .about__text {
-    color: #323232;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    padding: 0;
-  }
-  .photo {
+  .show {
     padding: 0 2.25rem 2.25rem;
   }
-  .photo__title {
-    color: #323232;
+  .show__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
+    font-weight: 600;
+    margin: 0;
     padding: 3rem 0 2.25rem;
   }
-  .photo__container {
+  .show__headers {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
   }
-  .photo__image {
-    width: 33%;
-    padding: 0.5rem;
-    flex-grow: 1;
+  .show__headers-item {
+    color: #afafaf;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    width: 25%;
+    margin: 0;
   }
-  .comment {
-    padding: 0 36px;
+  .ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
   }
-  .comment__section-title {
-    color: #323232;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding: 3rem 0 2.25rem;
+  .ticket__title {
+    display: none;
   }
-  .comment__outer-container {
-    padding: 0 4rem;
+  .ticket__text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding: 0;
+    width: 25%;
   }
-  .comment__avatar {
-    width: 3rem;
-    height: 3rem;
+  .ticket__button {
+    font-size: 0.875rem;
+    width: 25%;
+    min-height: 2.5rem;
+    text-align: center;
+    margin: 0;
   }
-  .comment__button {
-    margin-left: auto;
-    width: 9.375rem;
+  .ticket__divider {
+    margin: 0;
   }
 }
-/* styles for hero on desktop */
+/* styles for header on desktop */
 @media only screen and (min-width: 1280px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 0 6rem;
+    gap: 3rem;
+  }
   .hero__title {
-    padding-left: 6rem;
+    padding: 2.25rem 0 12rem;
   }
-  .about__title {
-    padding-left: 3.75rem;
+  .hero__subtitle {
+    padding-top: 6rem;
   }
-  .about__container {
-    padding: 0 10rem;
-  }
-  .photo {
-    padding: 0 6rem 2.25rem;
-  }
-  .comment {
+  .show {
+    display: flex;
     padding: 0 6rem;
   }
-  .comment__outer-container {
-    max-width: 40rem;
+  .show__title {
+    width: 30%;
+  }
+  .show__container {
+    width: 70%;
+    padding: 3rem 0;
+  }
+  .show__headers-item {
+    padding-bottom: 2.25rem;
   }
 }
 /* styles for footer for mobile */
@@ -497,4 +387,4 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-}/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=shows.css.map */

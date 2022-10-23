@@ -22,7 +22,6 @@
   }
 
   &__menu-item {
-    // width: 50%;
     flex: 0.5;
     text-align: center;
   }
@@ -40,6 +39,7 @@
     }
 
     &--active {
+      color: colors.$white;
       border-bottom: 0.2rem solid colors.$white;
     }
   }
@@ -55,7 +55,6 @@
     &__logo {
       padding-top: 2rem;
       padding-left: 2rem;
-      // flex-grow: 1;
     }
 
     &__navigation {
