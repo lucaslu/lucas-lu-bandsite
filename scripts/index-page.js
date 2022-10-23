@@ -67,7 +67,7 @@ const addComment = (event) => {
   const commentObj = {
     id: uniqueId(),
     name: inputNameValue,
-    comment: event.target.comment.value,
+    comment: inputCommentValue,
     date: new Date().toLocaleDateString("en-US"),
   };
 
