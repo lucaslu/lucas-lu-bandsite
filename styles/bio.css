@@ -120,7 +120,7 @@
 }
 
 .about {
-  padding: 0 1rem;
+  padding: 0 1rem 1rem;
 }
 .about__title {
   color: #323232;
@@ -163,6 +163,7 @@
 
 .photo {
   padding: 0 1rem;
+  background-color: #fafafa;
 }
 .photo__title {
   color: #323232;
@@ -185,6 +186,9 @@
 .comment {
   padding: 0 1rem;
 }
+.comment__outer-container {
+  margin: 0 auto;
+}
 .comment__section-title {
   color: #323232;
   font-size: 1.5rem;
@@ -195,12 +199,11 @@
 }
 .comment__container {
   display: flex;
-}
-.comment__left {
-  width: 15%;
+  justify-content: center;
+  gap: 1rem;
 }
 .comment__right {
-  width: 85%;
+  width: 100%;
 }
 .comment__add {
   display: flex;
@@ -224,6 +227,8 @@
 }
 .comment__input {
   font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+  color: #323232;
+  background-color: #fafafa;
   width: 100%;
   height: 2.25rem;
   border-radius: 0.25rem;
@@ -235,7 +240,8 @@
   border-color: #323232;
 }
 .comment__input--large {
-  height: 4.5rem;
+  height: 8rem;
+  resize: none;
 }
 .comment__input--error {
   border-color: #d22d2d;
@@ -251,6 +257,7 @@
   text-decoration: none;
   text-align: center;
   margin-bottom: 1rem;
+  border: none;
 }
 .comment__button:hover {
   background-color: #000000;
@@ -258,6 +265,9 @@
 .comment__divider {
   border: 0.0625rem solid #e1e1e1;
   margin: 0.5rem 0;
+}
+.comment__list {
+  padding-bottom: 1rem;
 }
 .comment__group-container {
   display: flex;
@@ -291,7 +301,7 @@
     padding-left: 1rem;
   }
   .about {
-    padding: 0 2.25rem;
+    padding: 0 2.25rem 2.25rem;
   }
   .about__title {
     color: #323232;
@@ -349,8 +359,29 @@
     padding: 0.5rem;
     flex-grow: 1;
   }
+  .comment {
+    padding: 0 36px;
+  }
+  .comment__section-title {
+    color: #323232;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding: 3rem 0 2.25rem;
+  }
+  .comment__outer-container {
+    padding: 0 4rem;
+  }
+  .comment__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+  .comment__button {
+    margin-left: auto;
+    width: 9.375rem;
+  }
 }
-/* styles for header on desktop */
+/* styles for hero on desktop */
 @media only screen and (min-width: 1280px) {
   .hero__title {
     padding-left: 6rem;
@@ -363,6 +394,12 @@
   }
   .photo {
     padding: 0 6rem 2.25rem;
+  }
+  .comment {
+    padding: 0 6rem;
+  }
+  .comment__outer-container {
+    max-width: 40rem;
   }
 }
 /* styles for footer for mobile */

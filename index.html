@@ -132,39 +132,38 @@
       <!-- Comments section -->
       <section class="comment">
         <h2 class="comment__section-title">Join the Conversation</h2>
-        <div class="comment__container">
-          <div class="comment__left">
-            <img
-              class="comment__avatar"
-              src="./assets/images/mohan-muruge.jpg"
-              alt="Mohan Muruge"
-            />
-          </div>
-          <div class="comment__right">
-            <form class="comment__add">
-              <label class="comment__title" for="name">NAME</label>
-              <input
-                class="comment__input"
-                type="text"
-                name="name"
-                placeholder="Enter your name"
+        <div class="comment__outer-container">
+          <div class="comment__container">
+            <div class="comment__left">
+              <img
+                class="comment__avatar"
+                src="./assets/images/mohan-muruge.jpg"
+                alt="Mohan Muruge"
               />
-              <label class="comment__title" for="comment">COMMENT</label>
-              <textarea
-                class="comment__input comment__input--large"
-                name="comment"
-                cols="30"
-                rows="10"
-                placeholder="Add a new comment"
-              ></textarea>
-              <button class="comment__button" type="submit">COMMENT</button>
-            </form>
+            </div>
+            <div class="comment__right">
+              <form class="comment__add">
+                <label class="comment__title" for="name">NAME</label>
+                <input
+                  class="comment__input"
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                />
+                <label class="comment__title" for="comment">COMMENT</label>
+                <textarea
+                  class="comment__input comment__input--large"
+                  name="commentInput"
+                  placeholder="Add a new comment"
+                ></textarea>
+                <button class="comment__button" type="submit">COMMENT</button>
+              </form>
+            </div>
           </div>
-        </div>
-        <hr class="comment__divider" />
-        <div class="comment__list">
-          <!-- template for javascript createElement -->
-          <article class="comment__item">
+          <hr class="comment__divider" />
+          <div class="comment__list">
+            <!-- template for javascript createElement -->
+            <!-- <article class="comment__item">
             <div class="comment__container">
               <div class="comment__left">
                 <div class="comment__avatar"></div>
@@ -183,8 +182,9 @@
               </div>
             </div>
           </article>
-          <hr class="comment__divider" />
-          <!-- template for javascript createElement -->
+          <hr class="comment__divider" /> -->
+            <!-- template for javascript createElement -->
+          </div>
         </div>
       </section>
     </main>
@@ -275,6 +275,6 @@
       </p>
     </footer>
     <!-- Footer -->
-    <!-- <script src="./scripts/index-page.js"></script> -->
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>

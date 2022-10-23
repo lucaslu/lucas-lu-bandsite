@@ -33,7 +33,6 @@
   &__text {
     @include mixins.title(colors.$white, 0.8125rem, 1.125rem, 400);
     margin: 0;
-    // padding-bottom: 1rem;
     text-decoration: none;
   }
 
@@ -65,7 +64,6 @@
 
     &__text {
       @include mixins.title(null, 0.875rem, 1.25rem, null);
-      // padding-bottom: 2.25rem;
     }
 
     &__text-title {
@@ -86,7 +84,6 @@
     padding: 0 6rem 2.25rem;
 
     &__logo {
-      // top: 1.5rem;
       right: 7rem;
     }
   }

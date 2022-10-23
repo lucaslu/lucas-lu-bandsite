@@ -35,8 +35,6 @@
 }
 
 .show {
-  // padding: 0 1rem;
-
   &__title {
     @include mixins.title(colors.$bandsite-black, 1.5rem, 2rem, 700);
     margin: 0;
@@ -49,9 +47,6 @@
 }
 
 .ticket {
-  // border-bottom: 0.0625rem solid colors.$mercury;
-  // margin-bottom: 1rem;
-
   &:hover {
     background-color: colors.$alabaster;
   }
@@ -119,7 +114,6 @@
     }
 
     &__iframe {
-      // max-width: 50rem;
       padding-bottom: 2.25rem;
     }
   }
@@ -159,7 +153,6 @@
       @include mixins.title(null, 0.875rem, null, null);
       width: 25%;
       min-height: 2.5rem;
-      // padding: 0.5rem 5rem;
       text-align: center;
       margin: 0;
     }
