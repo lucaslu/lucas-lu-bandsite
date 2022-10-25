@@ -38,7 +38,6 @@ const clearError = (nameAddInput, commentAddInput) => {
 };
 
 const showError = (inputField) => {
-  const commentAddForm = document.querySelector(".comment__add");
   const nameAddInput = document.querySelector('input[name="name"]');
   const commentAddInput = document.querySelector(".comment__input--large");
 
@@ -89,12 +88,14 @@ const displayComment = (commentObj, commentsListContainer) => {
     null,
     commentItem
   );
+
   const newContainerLeft = addElement(
     "div",
     "comment__left",
     null,
     newContainer
   );
+
   addElement("div", "comment__avatar", null, newContainerLeft);
   const newContainerRight = addElement(
     "div",
@@ -102,14 +103,28 @@ const displayComment = (commentObj, commentsListContainer) => {
     null,
     newContainer
   );
+
   const newGroupContainer = addElement(
     "div",
     "comment__group-container",
     null,
     newContainerRight
   );
+
   addElement("p", "comment__name", commentObj.name, newGroupContainer);
-  addElement("p", "comment__date", commentObj.date, newGroupContainer);
+
+  addElement(
+    "p",
+    "comment__date",
+    new Date(commentObj.timestamp).toLocaleDateString("en-US", {
+      timezone: "America/New_York",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    }),
+    newGroupContainer
+  );
+
   addElement("p", "comment__text", commentObj.comment, newContainerRight);
   commentsListContainer.appendChild(commentItem);
   addElement("hr", "comment__divider", null, commentsListContainer);
