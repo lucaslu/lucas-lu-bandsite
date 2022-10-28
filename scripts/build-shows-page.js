@@ -55,7 +55,11 @@ addElement(newHeader, "h3", "show__headers-item", null);
 
 const createConcert = (date, venue, location) => {
   const newArticle = addElement(newShowContainer, "article", "ticket", null);
+
   newArticle.addEventListener("click", (event) => {
+    const ticketSelected = document.querySelector(".ticket--selected");
+    ticketSelected && ticketSelected.classList.remove("ticket--selected");
+
     newArticle.classList.toggle("ticket--selected");
   });
 
@@ -99,11 +103,14 @@ const render = () => {
   const showsURL =
     "https://project-1-api.herokuapp.com/showdates?api_key=d20c0b44-c0a5-48c0-97c5-06ce738e8211";
 
-  axios.get(showsURL).then((response) => {
-    response.data.forEach(({ date, place, location }) => {
-      createConcert(date, place, location);
-    });
-  });
+  axios
+    .get(showsURL)
+    .then((response) => {
+      response.data.forEach(({ date, place, location }) => {
+        createConcert(date, place, location);
+      });
+    })
+    .catch((error) => console.log(error));
 };
 
 render();

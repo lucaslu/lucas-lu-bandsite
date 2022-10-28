@@ -24,6 +24,9 @@ const uniqueId = () => Math.random().toString(36).substring(2, 9);
 //   },
 // ];
 
+const commentsURL =
+  "https://project-1-api.herokuapp.com/comments?api_key=d20c0b44-c0a5-48c0-97c5-06ce738e8211";
+
 const addElement = (element, className, text, parentElement) => {
   const newElement = document.createElement(element);
   newElement.classList.add(className);
@@ -64,21 +67,24 @@ const addComment = (event) => {
   }
 
   const commentObj = {
-    id: uniqueId(),
+    // id: uniqueId(),
     name: inputNameValue,
     comment: inputCommentValue,
-    date: new Date().toLocaleDateString("en-US"),
+    // date: Date.now(),
   };
 
-  comments.unshift(commentObj);
-  render();
+  // comments.unshift(commentObj);
 
-  // clear everything from the form
-  event.target.reset();
+  axios.post(commentsURL, commentObj).then((response) => {
+    render();
+
+    // clear everything from the form
+    event.target.reset();
+  });
 };
 
 const displayComment = (commentObj, commentsListContainer) => {
-  console.log(commentObj);
+  // console.log(commentObj);
   const commentItem = addElement("article", "comment__item", null, null);
   commentItem.setAttribute("id", commentObj.id);
 
@@ -134,14 +140,19 @@ const render = () => {
   const commentsListContainer = document.querySelector(".comment__list");
   commentsListContainer.innerHTML = "";
 
-  const commentsURL =
-    "https://project-1-api.herokuapp.com/comments?api_key=d20c0b44-c0a5-48c0-97c5-06ce738e8211";
+  axios
+    .get(commentsURL)
+    .then((response) => {
+      // Sort array
+      response.data.sort(
+        (dateOne, dateTwo) => dateTwo.timestamp - dateOne.timestamp
+      );
 
-  axios.get(commentsURL).then((response) => {
-    response.data.forEach((comment) => {
-      displayComment(comment, commentsListContainer);
-    });
-  });
+      response.data.forEach((comment) => {
+        displayComment(comment, commentsListContainer);
+      });
+    })
+    .catch((error) => console.log(error));
 };
 
 render();

@@ -4,7 +4,7 @@
 
 /* styles for header for mobile */
 .header {
-  background-color: colors.$bandsite-black;
+  background-color: colors.$color-primary-dark;
 
   &__logo {
     max-width: 7.5rem;
@@ -28,19 +28,19 @@
 
   &__menu-item-link {
     display: block;
-    @include mixins.title(colors.$mercury, 0.875rem);
+    @include mixins.title(colors.$color-ui-secondary, 0.875rem);
     text-decoration: none;
     padding: 1rem 0;
     border-bottom: 0.2rem solid transparent;
 
     &:hover {
-      color: colors.$white;
-      border-bottom: 0.2rem solid colors.$white;
+      color: colors.$color-text-primary;
+      border-bottom: 0.2rem solid colors.$color-text-primary;
     }
 
     &--active {
-      color: colors.$white;
-      border-bottom: 0.2rem solid colors.$white;
+      color: colors.$color-text-primary;
+      border-bottom: 0.2rem solid colors.$color-text-primary;
     }
   }
 }
@@ -63,9 +63,9 @@
 
     &__menu {
       justify-content: flex-start;
-      gap: 2rem;
+      gap: 3rem;
       margin: 0;
-      padding-left: 5rem;
+      padding-left: 6rem;
     }
 
     &__menu-item {
@@ -81,11 +81,24 @@
 /* styles for header on desktop */
 @include breakpoint.large {
   .header {
+    max-width: 80rem;
+    margin: 0 auto;
+
     &__logo {
       padding-left: 6rem;
     }
     &__menu {
       padding-left: 9rem;
     }
+  }
+
+  .main-content {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .footer {
+    max-width: 80rem;
+    margin: 0 auto;
   }
 }

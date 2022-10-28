@@ -82,9 +82,9 @@
   }
   .header__menu {
     justify-content: flex-start;
-    gap: 2rem;
+    gap: 3rem;
     margin: 0;
-    padding-left: 5rem;
+    padding-left: 6rem;
   }
   .header__menu-item {
     flex: unset;
@@ -97,11 +97,23 @@
 }
 /* styles for header on desktop */
 @media only screen and (min-width: 1280px) {
+  .header {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
   .header__logo {
     padding-left: 6rem;
   }
   .header__menu {
     padding-left: 9rem;
+  }
+  .main-content {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  .footer {
+    max-width: 80rem;
+    margin: 0 auto;
   }
 }
 /* styles for main content for mobile */
@@ -272,7 +284,7 @@
     gap: 3rem;
   }
   .hero__title {
-    padding: 2.25rem 0 12rem;
+    padding: 2.25rem 0 14rem;
   }
   .hero__subtitle {
     padding-top: 6rem;

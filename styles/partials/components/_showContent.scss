@@ -15,14 +15,14 @@
   padding: 0 1rem;
 
   &__title {
-    @include mixins.title(colors.$white, 1.5rem, 2rem, 700);
+    @include mixins.title(colors.$color-text-primary, 1.5rem, 2rem, 700);
     margin: 0;
     padding: 1rem 0;
     max-width: 16rem;
   }
 
   &__subtitle {
-    @include mixins.title(colors.$white, 0.875rem, null);
+    @include mixins.title(colors.$color-text-primary, 0.875rem, null);
     margin: 0;
     padding-top: 1.5rem;
   }
@@ -35,7 +35,7 @@
 
 .show {
   &__title {
-    @include mixins.title(colors.$bandsite-black, 1.5rem, 2rem, 700);
+    @include mixins.title(colors.$color-primary-dark, 1.5rem, 2rem, 700);
     margin: 0;
     padding: 1.5rem 1rem 1rem;
   }
@@ -47,25 +47,25 @@
 
 .ticket {
   &:hover {
-    background-color: colors.$alabaster;
+    background-color: colors.$color-background-secondary;
   }
 
   &--selected {
-    background-color: colors.$mercury;
+    background-color: colors.$color-ui-secondary;
 
     &:hover {
-      background-color: colors.$mercury;
+      background-color: colors.$color-ui-secondary;
     }
   }
 
   &__title {
-    @include mixins.title(colors.$silver, 0.875rem, 1.375rem);
+    @include mixins.title(colors.$color-text-secondary, 0.875rem, 1.375rem);
     padding: 0 1rem;
     margin: 0;
   }
 
   &__text {
-    @include mixins.title(colors.$bandsite-black, 0.8125rem, 1.375rem, 400);
+    @include mixins.title(colors.$color-primary-dark, 0.8125rem, 1.375rem, 400);
     margin: 0;
     padding: 0 1rem 1rem;
   }
@@ -75,9 +75,9 @@
   }
 
   &__button {
-    @include mixins.title(colors.$white, 0.8125rem, null, 400);
+    @include mixins.title(colors.$color-text-primary, 0.8125rem, null, 400);
     display: block;
-    background-color: colors.$bandsite-black;
+    background-color: colors.$color-primary-dark;
     border-radius: 0.25rem;
     min-height: 2.5rem;
     padding: 0.875rem 2rem;
@@ -86,12 +86,12 @@
     margin: 0 1rem;
 
     &:hover {
-      background-color: colors.$bandsite-darkblack;
+      background-color: colors.$color-cta-hover;
     }
   }
 
   &__divider {
-    border: 0.0625rem solid colors.$mercury;
+    border: 0.0625rem solid colors.$color-ui-secondary;
     margin: 0.5rem 0;
   }
 }
@@ -128,7 +128,7 @@
       @include mixins.flexed(space-between, baseline);
     }
     &__headers-item {
-      @include mixins.title(colors.$silver, 0.875rem, 1.375rem);
+      @include mixins.title(colors.$color-text-secondary, 0.875rem, 1.375rem);
       width: 25%;
       margin: 0;
     }
@@ -171,7 +171,7 @@
     gap: 3rem;
 
     &__title {
-      padding: 2.25rem 0 12rem;
+      padding: 2.25rem 0 14rem;
     }
 
     &__subtitle {

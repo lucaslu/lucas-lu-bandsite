@@ -82,9 +82,9 @@
   }
   .header__menu {
     justify-content: flex-start;
-    gap: 2rem;
+    gap: 3rem;
     margin: 0;
-    padding-left: 5rem;
+    padding-left: 6rem;
   }
   .header__menu-item {
     flex: unset;
@@ -97,11 +97,23 @@
 }
 /* styles for header on desktop */
 @media only screen and (min-width: 1280px) {
+  .header {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
   .header__logo {
     padding-left: 6rem;
   }
   .header__menu {
     padding-left: 9rem;
+  }
+  .main-content {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  .footer {
+    max-width: 80rem;
+    margin: 0 auto;
   }
 }
 /* styles for main content for mobile */
@@ -293,6 +305,9 @@
 
 /* styles for main content on tablet device */
 @media only screen and (min-width: 768px) {
+  .hero {
+    padding: 12rem 0;
+  }
   .hero__title {
     color: #ffffff;
     font-size: 3.75rem;

@@ -4,7 +4,7 @@
 
 /* styles for footer for mobile */
 .footer {
-  background-color: colors.$bandsite-black;
+  background-color: colors.$color-primary-dark;
   padding: 0 1rem 1rem;
 
   &__container {
@@ -16,7 +16,7 @@
   }
 
   &__title {
-    @include mixins.title(colors.$white, 1.5rem, 2rem, 600);
+    @include mixins.title(colors.$color-text-primary, 1.5rem, 2rem, 600);
     margin: 0;
     padding: 1.5rem 0 1rem;
   }
@@ -31,13 +31,13 @@
   }
 
   &__text {
-    @include mixins.title(colors.$white, 0.8125rem, 1.125rem, 400);
+    @include mixins.title(colors.$color-text-primary, 0.8125rem, 1.125rem, 400);
     margin: 0;
     text-decoration: none;
   }
 
   &__spacing {
-    margin: 0 solid colors.$bandsite-black;
+    margin: 0 solid colors.$color-primary-dark;
   }
 }
 
@@ -53,7 +53,7 @@
     }
 
     &__title {
-      @include mixins.title(colors.$white, 2.25rem, null, 600);
+      @include mixins.title(colors.$color-text-primary, 2.25rem, null, 600);
       padding: 3rem 2.25rem 2.25rem 0;
     }
 
