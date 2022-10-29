@@ -1,36 +1,3 @@
-const concerts = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
-
 const addElement = (parent, element, className, text) => {
   const newElement = document.createElement(element);
   newElement.classList.add(className);
@@ -55,14 +22,29 @@ addElement(newHeader, "h3", "show__headers-item", null);
 
 const createConcert = (date, venue, location) => {
   const newArticle = addElement(newShowContainer, "article", "ticket", null);
+
   newArticle.addEventListener("click", (event) => {
+    const ticketSelected = document.querySelector(".ticket--selected");
+    ticketSelected && ticketSelected.classList.remove("ticket--selected");
+
     newArticle.classList.toggle("ticket--selected");
   });
 
   const newDate = addElement(newArticle, "p", "ticket__title", "DATE");
   newDate.classList.add("ticket__title--hidden");
 
-  const newDateText = addElement(newArticle, "p", null, date);
+  const newDateText = addElement(
+    newArticle,
+    "p",
+    null,
+    new Date(date).toLocaleDateString("en-US", {
+      timezone: "America/New_York",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+  );
+
   newDateText.classList.add("ticket__text", "ticket__text-strong");
 
   const newVenue = addElement(newArticle, "p", "ticket__title", "VENUE");
@@ -70,7 +52,7 @@ const createConcert = (date, venue, location) => {
 
   addElement(newArticle, "p", "ticket__text", venue);
 
-  const newLocation = addElement(newArticle, "p", "ticket__title", "LOCATION");
+  addElement(newArticle, "p", "ticket__title", "LOCATION");
 
   addElement(newArticle, "p", "ticket__text", location);
 
@@ -84,6 +66,18 @@ const createConcert = (date, venue, location) => {
   addElement(newShowContainer, "hr", "ticket__divider", null);
 };
 
-concerts.forEach(({ date, venue, location }) =>
-  createConcert(date, venue, location)
-);
+const render = () => {
+  const showsURL =
+    "https://project-1-api.herokuapp.com/showdates?api_key=d20c0b44-c0a5-48c0-97c5-06ce738e8211";
+
+  axios
+    .get(showsURL)
+    .then((response) => {
+      response.data.forEach(({ date, place, location }) => {
+        createConcert(date, place, location);
+      });
+    })
+    .catch((error) => console.log(error));
+};
+
+render();
