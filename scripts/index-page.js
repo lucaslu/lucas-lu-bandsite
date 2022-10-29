@@ -1,29 +1,3 @@
-const uniqueId = () => Math.random().toString(36).substring(2, 9);
-
-// const comments = [
-//   {
-//     id: uniqueId(),
-//     name: "Connor Walton",
-//     comment:
-//       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//     date: "02/17/2021",
-//   },
-//   {
-//     id: uniqueId(),
-//     name: "Emilie Beach",
-//     comment:
-//       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-//     date: "01/09/2021",
-//   },
-//   {
-//     id: uniqueId(),
-//     name: "Miles Acosta",
-//     comment:
-//       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//     date: "12/20/2020",
-//   },
-// ];
-
 const commentsURL =
   "https://project-1-api.herokuapp.com/comments?api_key=d20c0b44-c0a5-48c0-97c5-06ce738e8211";
 
@@ -67,24 +41,22 @@ const addComment = (event) => {
   }
 
   const commentObj = {
-    // id: uniqueId(),
     name: inputNameValue,
     comment: inputCommentValue,
-    // date: Date.now(),
   };
 
-  // comments.unshift(commentObj);
+  axios
+    .post(commentsURL, commentObj)
+    .then((response) => {
+      render();
 
-  axios.post(commentsURL, commentObj).then((response) => {
-    render();
-
-    // clear everything from the form
-    event.target.reset();
-  });
+      // clear everything from the form
+      event.target.reset();
+    })
+    .catch((error) => console.log(error));
 };
 
 const displayComment = (commentObj, commentsListContainer) => {
-  // console.log(commentObj);
   const commentItem = addElement("article", "comment__item", null, null);
   commentItem.setAttribute("id", commentObj.id);
 
